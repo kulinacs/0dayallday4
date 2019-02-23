@@ -1,0 +1,4 @@
+# Nmap 7.70 scan initiated Sat Feb 23 12:23:03 2019 as: nmap -sC -sV -oA circle 10.123.234.1
+Host: 10.123.234.1 (device.meetcircle.co)	Status: Up
+Host: 10.123.234.1 (device.meetcircle.co)	Ports: 22/open/tcp//ssh//Dropbear sshd 2014.63 (protocol 2.0)/, 53/open/tcp//domain//dnsmasq 2.62/, 80/open/tcp//rtsp///, 443/open/tcp//ssl|rtsp///, 4444/open/tcp//http//mini_httpd 1.19 19dec2003/, 4567/open/tcp//ssl|http//mini_httpd 1.19 19dec2003/	Ignored State: closed (994)
+# Nmap done at Sat Feb 23 12:24:33 2019 -- 1 IP address (1 host up) scanned in 89.93 seconds

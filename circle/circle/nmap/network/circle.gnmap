@@ -1,0 +1,4 @@
+# Nmap 7.70 scan initiated Sat Feb 23 12:44:39 2019 as: nmap -sV -sC -p- -oA circle 10.42.0.219
+Host: 10.42.0.219 ()	Status: Up
+Host: 10.42.0.219 ()	Ports: 80/open/tcp//rtsp///, 443/open/tcp//ssl|rtsp///, 4444/open/tcp//rtsp///, 4567/open/tcp//ssl|rtsp///	Ignored State: closed (65531)
+# Nmap done at Sat Feb 23 12:45:35 2019 -- 1 IP address (1 host up) scanned in 56.06 seconds

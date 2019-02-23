@@ -1,0 +1,400 @@
+# Nmap 7.70 scan initiated Sat Feb 23 12:44:39 2019 as: nmap -sV -sC -p- -oA circle 10.42.0.219
+WARNING: Service 10.42.0.219:80 had already soft-matched rtsp, but now soft-matched sip; ignoring second value
+WARNING: Service 10.42.0.219:443 had already soft-matched rtsp, but now soft-matched sip; ignoring second value
+WARNING: Service 10.42.0.219:4444 had already soft-matched rtsp, but now soft-matched sip; ignoring second value
+WARNING: Service 10.42.0.219:4567 had already soft-matched rtsp, but now soft-matched sip; ignoring second value
+Nmap scan report for 10.42.0.219
+Host is up (0.013s latency).
+Not shown: 65531 closed ports
+PORT     STATE SERVICE  VERSION
+80/tcp   open  rtsp
+| fingerprint-strings: 
+|   FourOhFourRequest, GetRequest: 
+|     HTTP/1.0 302 Found
+|     Server: webd 1.0
+|     Date: Sat, 23 Feb 2019 18:45:08 GMT
+|     Access-Control-Allow-Origin: *
+|     Location: http://filter.meetcircle.com
+|     Content-Type: text/html
+|     Connection: close
+|   HTTPOptions: 
+|     HTTP/1.0 501 Not Implemented
+|     Server: webd 1.0
+|     Date: Sat, 23 Feb 2019 18:45:08 GMT
+|     Access-Control-Allow-Origin: *
+|     Cache-Control: no-cache,no-store
+|     Content-Type: text/html; charset=%s
+|     Connection: close
+|     <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+|     <html>
+|     <head>
+|     <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+|     <title>501 Not Implemented</title>
+|     </head>
+|     <body bgcolor="#cc9999" text="#000000" link="#2020ff" vlink="#4040cc">
+|     <h4>501 Not Implemented</h4>
+|     That method is not implemented.
+|   RTSPRequest: 
+|     RTSP/1.0 501 Not Implemented
+|     Server: webd 1.0
+|     Date: Sat, 23 Feb 2019 18:45:08 GMT
+|     Access-Control-Allow-Origin: *
+|     Cache-Control: no-cache,no-store
+|     Content-Type: text/html; charset=%s
+|     Connection: close
+|     <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+|     <html>
+|     <head>
+|     <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+|     <title>501 Not Implemented</title>
+|     </head>
+|     <body bgcolor="#cc9999" text="#000000" link="#2020ff" vlink="#4040cc">
+|     <h4>501 Not Implemented</h4>
+|_    That method is not implemented.
+|_http-server-header: webd 1.0
+|_http-title: Did not follow redirect to http://filter.meetcircle.com
+|_rtsp-methods: ERROR: Script execution failed (use -d to debug)
+443/tcp  open  ssl/rtsp
+| fingerprint-strings: 
+|   FourOhFourRequest, GetRequest: 
+|     HTTP/1.0 302 Found
+|     Server: webd 1.0
+|     Date: Sat, 23 Feb 2019 18:45:15 GMT
+|     Access-Control-Allow-Origin: *
+|     Location: http://filter.meetcircle.com
+|     Content-Type: text/html
+|     Connection: close
+|   GenericLines: 
+|     (null) 400 Bad Request
+|     Server: webd 1.0
+|     Date: Sat, 23 Feb 2019 18:45:21 GMT
+|     Access-Control-Allow-Origin: *
+|     Cache-Control: no-cache,no-store
+|     Content-Type: text/html; charset=%s
+|     Connection: close
+|     <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+|     <html>
+|     <head>
+|     <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+|     <title>400 Bad Request</title>
+|     </head>
+|     <body bgcolor="#cc9999" text="#000000" link="#2020ff" vlink="#4040cc">
+|     <h4>400 Bad Request</h4>
+|     Can't parse request.
+|   HTTPOptions: 
+|     HTTP/1.0 501 Not Implemented
+|     Server: webd 1.0
+|     Date: Sat, 23 Feb 2019 18:45:15 GMT
+|     Access-Control-Allow-Origin: *
+|     Cache-Control: no-cache,no-store
+|     Content-Type: text/html; charset=%s
+|     Connection: close
+|     <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+|     <html>
+|     <head>
+|     <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+|     <title>501 Not Implemented</title>
+|     </head>
+|     <body bgcolor="#cc9999" text="#000000" link="#2020ff" vlink="#4040cc">
+|     <h4>501 Not Implemented</h4>
+|_    That method is not implemented.
+|_http-server-header: webd 1.0
+|_http-title: Did not follow redirect to http://filter.meetcircle.com
+| ssl-cert: Subject: commonName=Circle002/organizationName=Circle Media Inc./countryName=US
+| Subject Alternative Name: IP Address:10.123.234.1, DNS:meetcircle.local
+| Not valid before: 2016-09-08T21:42:16
+|_Not valid after:  2036-09-03T21:42:16
+|_ssl-date: TLS randomness does not represent time
+4444/tcp open  rtsp
+| fingerprint-strings: 
+|   GenericLines: 
+|     (null) 400 Bad Request
+|     Server: apid 1.0
+|     Date: Sat, 23 Feb 2019 18:45:23 GMT
+|     Vary: Accept-Encoding, Origin
+|     Cache-Control: no-cache,no-store
+|     Content-Type: text/html; charset=%s
+|     Connection: close
+|     <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+|     <html>
+|     <head>
+|     <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+|     <title>400 Bad Request</title>
+|     </head>
+|     <body bgcolor="#cc9999" text="#000000" link="#2020ff" vlink="#4040cc">
+|     <h4>400 Bad Request</h4>
+|     Can't parse request.
+|     <hr>
+|     <address><a href="https://www.meetcircle.com/">apid 1.0</a></address>
+|     </body>
+|     </html>
+|   GetRequest: 
+|     HTTP/1.0 400 Bad Request
+|     Server: apid 1.0
+|     Date: Sat, 23 Feb 2019 18:45:08 GMT
+|     Vary: Accept-Encoding, Origin
+|     Cache-Control: no-cache,no-store
+|     Content-Type: text/html; charset=%s
+|     Connection: close
+|     <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+|     <html>
+|     <head>
+|     <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+|     <title>400 Bad Request</title>
+|     </head>
+|     <body bgcolor="#cc9999" text="#000000" link="#2020ff" vlink="#4040cc">
+|     <h4>400 Bad Request</h4>
+|     Internal Error 2.
+|     <hr>
+|     <address><a href="https://www.meetcircle.com/">apid 1.0</a></address>
+|     </body>
+|     </html>
+|   HTTPOptions: 
+|     HTTP/1.0 501 Not Implemented
+|     Server: apid 1.0
+|     Date: Sat, 23 Feb 2019 18:45:23 GMT
+|     Vary: Accept-Encoding, Origin
+|     Cache-Control: no-cache,no-store
+|     Content-Type: text/html; charset=%s
+|     Connection: close
+|     <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+|     <html>
+|     <head>
+|     <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+|     <title>501 Not Implemented</title>
+|     </head>
+|     <body bgcolor="#cc9999" text="#000000" link="#2020ff" vlink="#4040cc">
+|     <h4>501 Not Implemented</h4>
+|     That method is not implemented.
+|     <hr>
+|     <address><a href="https://www.meetcircle.com/">apid 1.0</a></address>
+|     </body>
+|_    </html>
+|_rtsp-methods: ERROR: Script execution failed (use -d to debug)
+4567/tcp open  ssl/rtsp
+| fingerprint-strings: 
+|   GenericLines: 
+|     (null) 400 Bad Request
+|     Server: apid 1.0
+|     Date: Sat, 23 Feb 2019 18:45:27 GMT
+|     Vary: Accept-Encoding, Origin
+|     Cache-Control: no-cache,no-store
+|     Content-Type: text/html; charset=%s
+|     Connection: close
+|     <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+|     <html>
+|     <head>
+|     <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+|     <title>400 Bad Request</title>
+|     </head>
+|     <body bgcolor="#cc9999" text="#000000" link="#2020ff" vlink="#4040cc">
+|     <h4>400 Bad Request</h4>
+|     Can't parse request.
+|     <hr>
+|     <address><a href="https://www.meetcircle.com/">apid 1.0</a></address>
+|     </body>
+|     </html>
+|   GetRequest: 
+|     HTTP/1.0 400 Bad Request
+|     Server: apid 1.0
+|     Date: Sat, 23 Feb 2019 18:45:27 GMT
+|     Vary: Accept-Encoding, Origin
+|     Cache-Control: no-cache,no-store
+|     Content-Type: text/html; charset=%s
+|     Connection: close
+|     <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+|     <html>
+|     <head>
+|     <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+|     <title>400 Bad Request</title>
+|     </head>
+|     <body bgcolor="#cc9999" text="#000000" link="#2020ff" vlink="#4040cc">
+|     <h4>400 Bad Request</h4>
+|     Internal Error 2.
+|     <hr>
+|     <address><a href="https://www.meetcircle.com/">apid 1.0</a></address>
+|     </body>
+|     </html>
+|   HTTPOptions: 
+|     HTTP/1.0 501 Not Implemented
+|     Server: apid 1.0
+|     Date: Sat, 23 Feb 2019 18:45:27 GMT
+|     Vary: Accept-Encoding, Origin
+|     Cache-Control: no-cache,no-store
+|     Content-Type: text/html; charset=%s
+|     Connection: close
+|     <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+|     <html>
+|     <head>
+|     <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+|     <title>501 Not Implemented</title>
+|     </head>
+|     <body bgcolor="#cc9999" text="#000000" link="#2020ff" vlink="#4040cc">
+|     <h4>501 Not Implemented</h4>
+|     That method is not implemented.
+|     <hr>
+|     <address><a href="https://www.meetcircle.com/">apid 1.0</a></address>
+|     </body>
+|_    </html>
+| ssl-cert: Subject: commonName=localhost/organizationName=Circle Media Inc/countryName=US
+| Subject Alternative Name: IP Address:10.123.234.1, DNS:meetcircle.local
+| Not valid before: 2015-09-11T07:00:09
+|_Not valid after:  2035-09-06T07:00:09
+|_ssl-date: TLS randomness does not represent time
+4 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port80-TCP:V=7.70%I=7%D=2/23%Time=5C7194B4%P=x86_64-redhat-linux-gnu%r(
+SF:GetRequest,C1,"HTTP/1\.0\x20302\x20Found\r\nServer:\x20webd\x201\.0\r\n
+SF:Date:\x20Sat,\x2023\x20Feb\x202019\x2018:45:08\x20GMT\r\nAccess-Control
+SF:-Allow-Origin:\x20\*\r\nLocation:\x20http://filter\.meetcircle\.com\r\n
+SF:Content-Type:\x20text/html\r\nConnection:\x20close\r\n\r\n")%r(HTTPOpti
+SF:ons,24E,"HTTP/1\.0\x20501\x20Not\x20Implemented\r\nServer:\x20webd\x201
+SF:\.0\r\nDate:\x20Sat,\x2023\x20Feb\x202019\x2018:45:08\x20GMT\r\nAccess-
+SF:Control-Allow-Origin:\x20\*\r\nCache-Control:\x20no-cache,no-store\r\nC
+SF:ontent-Type:\x20text/html;\x20charset=%s\r\nConnection:\x20close\r\n\r\
+SF:n<!DOCTYPE\x20html\x20PUBLIC\x20\"-//W3C//DTD\x20HTML\x204\.01\x20Trans
+SF:itional//EN\"\x20\"http://www\.w3\.org/TR/html4/loose\.dtd\">\n\n<html>
+SF:\n\n\x20\x20<head>\n\x20\x20\x20\x20<meta\x20http-equiv=\"Content-type\
+SF:"\x20content=\"text/html;charset=UTF-8\">\n\x20\x20\x20\x20<title>501\x
+SF:20Not\x20Implemented</title>\n\x20\x20</head>\n\n\x20\x20<body\x20bgcol
+SF:or=\"#cc9999\"\x20text=\"#000000\"\x20link=\"#2020ff\"\x20vlink=\"#4040
+SF:cc\">\n\n\x20\x20\x20\x20<h4>501\x20Not\x20Implemented</h4>\nThat\x20me
+SF:thod\x20is\x20not\x20implemented\.\n")%r(RTSPRequest,24E,"RTSP/1\.0\x20
+SF:501\x20Not\x20Implemented\r\nServer:\x20webd\x201\.0\r\nDate:\x20Sat,\x
+SF:2023\x20Feb\x202019\x2018:45:08\x20GMT\r\nAccess-Control-Allow-Origin:\
+SF:x20\*\r\nCache-Control:\x20no-cache,no-store\r\nContent-Type:\x20text/h
+SF:tml;\x20charset=%s\r\nConnection:\x20close\r\n\r\n<!DOCTYPE\x20html\x20
+SF:PUBLIC\x20\"-//W3C//DTD\x20HTML\x204\.01\x20Transitional//EN\"\x20\"htt
+SF:p://www\.w3\.org/TR/html4/loose\.dtd\">\n\n<html>\n\n\x20\x20<head>\n\x
+SF:20\x20\x20\x20<meta\x20http-equiv=\"Content-type\"\x20content=\"text/ht
+SF:ml;charset=UTF-8\">\n\x20\x20\x20\x20<title>501\x20Not\x20Implemented</
+SF:title>\n\x20\x20</head>\n\n\x20\x20<body\x20bgcolor=\"#cc9999\"\x20text
+SF:=\"#000000\"\x20link=\"#2020ff\"\x20vlink=\"#4040cc\">\n\n\x20\x20\x20\
+SF:x20<h4>501\x20Not\x20Implemented</h4>\nThat\x20method\x20is\x20not\x20i
+SF:mplemented\.\n")%r(FourOhFourRequest,C1,"HTTP/1\.0\x20302\x20Found\r\nS
+SF:erver:\x20webd\x201\.0\r\nDate:\x20Sat,\x2023\x20Feb\x202019\x2018:45:0
+SF:8\x20GMT\r\nAccess-Control-Allow-Origin:\x20\*\r\nLocation:\x20http://f
+SF:ilter\.meetcircle\.com\r\nContent-Type:\x20text/html\r\nConnection:\x20
+SF:close\r\n\r\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port443-TCP:V=7.70%T=SSL%I=7%D=2/23%Time=5C7194BB%P=x86_64-redhat-linux
+SF:-gnu%r(GetRequest,C1,"HTTP/1\.0\x20302\x20Found\r\nServer:\x20webd\x201
+SF:\.0\r\nDate:\x20Sat,\x2023\x20Feb\x202019\x2018:45:15\x20GMT\r\nAccess-
+SF:Control-Allow-Origin:\x20\*\r\nLocation:\x20http://filter\.meetcircle\.
+SF:com\r\nContent-Type:\x20text/html\r\nConnection:\x20close\r\n\r\n")%r(H
+SF:TTPOptions,24E,"HTTP/1\.0\x20501\x20Not\x20Implemented\r\nServer:\x20we
+SF:bd\x201\.0\r\nDate:\x20Sat,\x2023\x20Feb\x202019\x2018:45:15\x20GMT\r\n
+SF:Access-Control-Allow-Origin:\x20\*\r\nCache-Control:\x20no-cache,no-sto
+SF:re\r\nContent-Type:\x20text/html;\x20charset=%s\r\nConnection:\x20close
+SF:\r\n\r\n<!DOCTYPE\x20html\x20PUBLIC\x20\"-//W3C//DTD\x20HTML\x204\.01\x
+SF:20Transitional//EN\"\x20\"http://www\.w3\.org/TR/html4/loose\.dtd\">\n\
+SF:n<html>\n\n\x20\x20<head>\n\x20\x20\x20\x20<meta\x20http-equiv=\"Conten
+SF:t-type\"\x20content=\"text/html;charset=UTF-8\">\n\x20\x20\x20\x20<titl
+SF:e>501\x20Not\x20Implemented</title>\n\x20\x20</head>\n\n\x20\x20<body\x
+SF:20bgcolor=\"#cc9999\"\x20text=\"#000000\"\x20link=\"#2020ff\"\x20vlink=
+SF:\"#4040cc\">\n\n\x20\x20\x20\x20<h4>501\x20Not\x20Implemented</h4>\nTha
+SF:t\x20method\x20is\x20not\x20implemented\.\n")%r(FourOhFourRequest,C1,"H
+SF:TTP/1\.0\x20302\x20Found\r\nServer:\x20webd\x201\.0\r\nDate:\x20Sat,\x2
+SF:023\x20Feb\x202019\x2018:45:15\x20GMT\r\nAccess-Control-Allow-Origin:\x
+SF:20\*\r\nLocation:\x20http://filter\.meetcircle\.com\r\nContent-Type:\x2
+SF:0text/html\r\nConnection:\x20close\r\n\r\n")%r(GenericLines,235,"\(null
+SF:\)\x20400\x20Bad\x20Request\r\nServer:\x20webd\x201\.0\r\nDate:\x20Sat,
+SF:\x2023\x20Feb\x202019\x2018:45:21\x20GMT\r\nAccess-Control-Allow-Origin
+SF::\x20\*\r\nCache-Control:\x20no-cache,no-store\r\nContent-Type:\x20text
+SF:/html;\x20charset=%s\r\nConnection:\x20close\r\n\r\n<!DOCTYPE\x20html\x
+SF:20PUBLIC\x20\"-//W3C//DTD\x20HTML\x204\.01\x20Transitional//EN\"\x20\"h
+SF:ttp://www\.w3\.org/TR/html4/loose\.dtd\">\n\n<html>\n\n\x20\x20<head>\n
+SF:\x20\x20\x20\x20<meta\x20http-equiv=\"Content-type\"\x20content=\"text/
+SF:html;charset=UTF-8\">\n\x20\x20\x20\x20<title>400\x20Bad\x20Request</ti
+SF:tle>\n\x20\x20</head>\n\n\x20\x20<body\x20bgcolor=\"#cc9999\"\x20text=\
+SF:"#000000\"\x20link=\"#2020ff\"\x20vlink=\"#4040cc\">\n\n\x20\x20\x20\x2
+SF:0<h4>400\x20Bad\x20Request</h4>\nCan't\x20parse\x20request\.\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port4444-TCP:V=7.70%I=7%D=2/23%Time=5C7194B4%P=x86_64-redhat-linux-gnu%
+SF:r(GetRequest,29B,"HTTP/1\.0\x20400\x20Bad\x20Request\r\nServer:\x20apid
+SF:\x201\.0\r\nDate:\x20Sat,\x2023\x20Feb\x202019\x2018:45:08\x20GMT\r\nVa
+SF:ry:\x20Accept-Encoding,\x20Origin\r\nCache-Control:\x20no-cache,no-stor
+SF:e\r\nContent-Type:\x20text/html;\x20charset=%s\r\nConnection:\x20close\
+SF:r\n\r\n<!DOCTYPE\x20html\x20PUBLIC\x20\"-//W3C//DTD\x20HTML\x204\.01\x2
+SF:0Transitional//EN\"\x20\"http://www\.w3\.org/TR/html4/loose\.dtd\">\n\n
+SF:<html>\n\n\x20\x20<head>\n\x20\x20\x20\x20<meta\x20http-equiv=\"Content
+SF:-type\"\x20content=\"text/html;charset=UTF-8\">\n\x20\x20\x20\x20<title
+SF:>400\x20Bad\x20Request</title>\n\x20\x20</head>\n\n\x20\x20<body\x20bgc
+SF:olor=\"#cc9999\"\x20text=\"#000000\"\x20link=\"#2020ff\"\x20vlink=\"#40
+SF:40cc\">\n\n\x20\x20\x20\x20<h4>400\x20Bad\x20Request</h4>\nInternal\x20
+SF:Error\x202\.\n\x20\x20\x20\x20<hr>\n\n\x20\x20\x20\x20<address><a\x20hr
+SF:ef=\"https://www\.meetcircle\.com/\">apid\x201\.0</a></address>\n\n\x20
+SF:\x20</body>\n\n</html>\n")%r(GenericLines,29C,"\(null\)\x20400\x20Bad\x
+SF:20Request\r\nServer:\x20apid\x201\.0\r\nDate:\x20Sat,\x2023\x20Feb\x202
+SF:019\x2018:45:23\x20GMT\r\nVary:\x20Accept-Encoding,\x20Origin\r\nCache-
+SF:Control:\x20no-cache,no-store\r\nContent-Type:\x20text/html;\x20charset
+SF:=%s\r\nConnection:\x20close\r\n\r\n<!DOCTYPE\x20html\x20PUBLIC\x20\"-//
+SF:W3C//DTD\x20HTML\x204\.01\x20Transitional//EN\"\x20\"http://www\.w3\.or
+SF:g/TR/html4/loose\.dtd\">\n\n<html>\n\n\x20\x20<head>\n\x20\x20\x20\x20<
+SF:meta\x20http-equiv=\"Content-type\"\x20content=\"text/html;charset=UTF-
+SF:8\">\n\x20\x20\x20\x20<title>400\x20Bad\x20Request</title>\n\x20\x20</h
+SF:ead>\n\n\x20\x20<body\x20bgcolor=\"#cc9999\"\x20text=\"#000000\"\x20lin
+SF:k=\"#2020ff\"\x20vlink=\"#4040cc\">\n\n\x20\x20\x20\x20<h4>400\x20Bad\x
+SF:20Request</h4>\nCan't\x20parse\x20request\.\n\x20\x20\x20\x20<hr>\n\n\x
+SF:20\x20\x20\x20<address><a\x20href=\"https://www\.meetcircle\.com/\">api
+SF:d\x201\.0</a></address>\n\n\x20\x20</body>\n\n</html>\n")%r(HTTPOptions
+SF:,2B5,"HTTP/1\.0\x20501\x20Not\x20Implemented\r\nServer:\x20apid\x201\.0
+SF:\r\nDate:\x20Sat,\x2023\x20Feb\x202019\x2018:45:23\x20GMT\r\nVary:\x20A
+SF:ccept-Encoding,\x20Origin\r\nCache-Control:\x20no-cache,no-store\r\nCon
+SF:tent-Type:\x20text/html;\x20charset=%s\r\nConnection:\x20close\r\n\r\n<
+SF:!DOCTYPE\x20html\x20PUBLIC\x20\"-//W3C//DTD\x20HTML\x204\.01\x20Transit
+SF:ional//EN\"\x20\"http://www\.w3\.org/TR/html4/loose\.dtd\">\n\n<html>\n
+SF:\n\x20\x20<head>\n\x20\x20\x20\x20<meta\x20http-equiv=\"Content-type\"\
+SF:x20content=\"text/html;charset=UTF-8\">\n\x20\x20\x20\x20<title>501\x20
+SF:Not\x20Implemented</title>\n\x20\x20</head>\n\n\x20\x20<body\x20bgcolor
+SF:=\"#cc9999\"\x20text=\"#000000\"\x20link=\"#2020ff\"\x20vlink=\"#4040cc
+SF:\">\n\n\x20\x20\x20\x20<h4>501\x20Not\x20Implemented</h4>\nThat\x20meth
+SF:od\x20is\x20not\x20implemented\.\n\x20\x20\x20\x20<hr>\n\n\x20\x20\x20\
+SF:x20<address><a\x20href=\"https://www\.meetcircle\.com/\">apid\x201\.0</
+SF:a></address>\n\n\x20\x20</body>\n\n</html>\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port4567-TCP:V=7.70%T=SSL%I=7%D=2/23%Time=5C7194C7%P=x86_64-redhat-linu
+SF:x-gnu%r(GenericLines,29C,"\(null\)\x20400\x20Bad\x20Request\r\nServer:\
+SF:x20apid\x201\.0\r\nDate:\x20Sat,\x2023\x20Feb\x202019\x2018:45:27\x20GM
+SF:T\r\nVary:\x20Accept-Encoding,\x20Origin\r\nCache-Control:\x20no-cache,
+SF:no-store\r\nContent-Type:\x20text/html;\x20charset=%s\r\nConnection:\x2
+SF:0close\r\n\r\n<!DOCTYPE\x20html\x20PUBLIC\x20\"-//W3C//DTD\x20HTML\x204
+SF:\.01\x20Transitional//EN\"\x20\"http://www\.w3\.org/TR/html4/loose\.dtd
+SF:\">\n\n<html>\n\n\x20\x20<head>\n\x20\x20\x20\x20<meta\x20http-equiv=\"
+SF:Content-type\"\x20content=\"text/html;charset=UTF-8\">\n\x20\x20\x20\x2
+SF:0<title>400\x20Bad\x20Request</title>\n\x20\x20</head>\n\n\x20\x20<body
+SF:\x20bgcolor=\"#cc9999\"\x20text=\"#000000\"\x20link=\"#2020ff\"\x20vlin
+SF:k=\"#4040cc\">\n\n\x20\x20\x20\x20<h4>400\x20Bad\x20Request</h4>\nCan't
+SF:\x20parse\x20request\.\n\x20\x20\x20\x20<hr>\n\n\x20\x20\x20\x20<addres
+SF:s><a\x20href=\"https://www\.meetcircle\.com/\">apid\x201\.0</a></addres
+SF:s>\n\n\x20\x20</body>\n\n</html>\n")%r(GetRequest,29B,"HTTP/1\.0\x20400
+SF:\x20Bad\x20Request\r\nServer:\x20apid\x201\.0\r\nDate:\x20Sat,\x2023\x2
+SF:0Feb\x202019\x2018:45:27\x20GMT\r\nVary:\x20Accept-Encoding,\x20Origin\
+SF:r\nCache-Control:\x20no-cache,no-store\r\nContent-Type:\x20text/html;\x
+SF:20charset=%s\r\nConnection:\x20close\r\n\r\n<!DOCTYPE\x20html\x20PUBLIC
+SF:\x20\"-//W3C//DTD\x20HTML\x204\.01\x20Transitional//EN\"\x20\"http://ww
+SF:w\.w3\.org/TR/html4/loose\.dtd\">\n\n<html>\n\n\x20\x20<head>\n\x20\x20
+SF:\x20\x20<meta\x20http-equiv=\"Content-type\"\x20content=\"text/html;cha
+SF:rset=UTF-8\">\n\x20\x20\x20\x20<title>400\x20Bad\x20Request</title>\n\x
+SF:20\x20</head>\n\n\x20\x20<body\x20bgcolor=\"#cc9999\"\x20text=\"#000000
+SF:\"\x20link=\"#2020ff\"\x20vlink=\"#4040cc\">\n\n\x20\x20\x20\x20<h4>400
+SF:\x20Bad\x20Request</h4>\nInternal\x20Error\x202\.\n\x20\x20\x20\x20<hr>
+SF:\n\n\x20\x20\x20\x20<address><a\x20href=\"https://www\.meetcircle\.com/
+SF:\">apid\x201\.0</a></address>\n\n\x20\x20</body>\n\n</html>\n")%r(HTTPO
+SF:ptions,2B5,"HTTP/1\.0\x20501\x20Not\x20Implemented\r\nServer:\x20apid\x
+SF:201\.0\r\nDate:\x20Sat,\x2023\x20Feb\x202019\x2018:45:27\x20GMT\r\nVary
+SF::\x20Accept-Encoding,\x20Origin\r\nCache-Control:\x20no-cache,no-store\
+SF:r\nContent-Type:\x20text/html;\x20charset=%s\r\nConnection:\x20close\r\
+SF:n\r\n<!DOCTYPE\x20html\x20PUBLIC\x20\"-//W3C//DTD\x20HTML\x204\.01\x20T
+SF:ransitional//EN\"\x20\"http://www\.w3\.org/TR/html4/loose\.dtd\">\n\n<h
+SF:tml>\n\n\x20\x20<head>\n\x20\x20\x20\x20<meta\x20http-equiv=\"Content-t
+SF:ype\"\x20content=\"text/html;charset=UTF-8\">\n\x20\x20\x20\x20<title>5
+SF:01\x20Not\x20Implemented</title>\n\x20\x20</head>\n\n\x20\x20<body\x20b
+SF:gcolor=\"#cc9999\"\x20text=\"#000000\"\x20link=\"#2020ff\"\x20vlink=\"#
+SF:4040cc\">\n\n\x20\x20\x20\x20<h4>501\x20Not\x20Implemented</h4>\nThat\x
+SF:20method\x20is\x20not\x20implemented\.\n\x20\x20\x20\x20<hr>\n\n\x20\x2
+SF:0\x20\x20<address><a\x20href=\"https://www\.meetcircle\.com/\">apid\x20
+SF:1\.0</a></address>\n\n\x20\x20</body>\n\n</html>\n");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Feb 23 12:45:35 2019 -- 1 IP address (1 host up) scanned in 56.06 seconds
